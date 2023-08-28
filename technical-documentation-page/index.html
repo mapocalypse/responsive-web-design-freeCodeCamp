@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Techinical Documentation Page created as part of freeCodeCamp's Responsive Web Design certification</title>
+</head>
+
+<body>
+  <nav id="navbar">
+    <header>CSS Tutorial</header>
+    <ul>
+      <li><a class="nav-link" href="#CSS_Introduction">CSS Introduction</a></li>
+      <li><a class="nav-link" href="#CSS_Syntax">CSS Syntax</a></li>
+      <li><a class="nav-link" href="#CSS_Selectors">CSS Selectors</a></li>
+      <li><a class="nav-link" href="#How_To_Add_CSS">How To Add CSS</a></li>
+      <li><a class="nav-link" href="#CSS_Box_Model">CSS Box Model</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="CSS_Introduction">
+      <header>
+        <h2>CSS Introduction</h2>
+      </header>
+      <ul>
+        <li>CSS stands for Cascading Style Sheets</li>
+        <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+        <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+        <li>External stylesheets are stored in CSS files</li>
+      </ul>
+      <p>CSS is used to define styles for your web pages, including the design, layout and variations in display for
+        different devices and screen sizes.</p>
+      <div class="example">
+        <h4>Example</h4>
+        <pre>
+        <code>
+body {
+background-color: lightblue;
+}
+
+h1 {
+color: white;
+text-align: center;
+}
+
+p {
+font-family: verdana;
+font-size: 20px;
+}
+        </code>
+        </pre>
+      </div>
+    </section>
+    <section class="main-section" id="CSS_Syntax">
+      <header>
+        <h2>CSS Syntax</h2>
+      </header>
+      <p>A CSS rule-set consists of a selector and a declaration block:</p>
+      <img src="./images/w3schools-selector.gif" alt="Example of a CSS rule-set">
+      <p>The selector points to the HTML element you want to style.</p>
+      <p>The declaration block contains one or more declarations separated by semicolons.</p>
+      <p>Each declaration includes a CSS property name and a value, separated by a colon.</p>
+      <p>Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.
+      </p>
+      <div class="example">
+        <h4>Example</h4>
+        <p>In this example all elements will be center-aligned, with a red text color:</p>
+        <pre>
+        <code>
+p {
+color: red;
+text-align: center;
+}
+        </code>
+        </pre>
+      </div>
+    </section>
+    <section class="main-section" id="CSS_Selectors">
+      <header>
+        <h2>CSS Selectors</h2>
+      </header>
+      <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.</p>
+      <p>We can divide CSS selectors into five categories:</p>
+      <ul>
+        <li>Simple selectors (select elements based on name, id, class)</li>
+        <li>Combinator selectors (select elements based on a specific relationship between them)</li>
+        <li>Pseudo-class selectors (select elements based on a certain state)</li>
+        <li>Pseudo-elements selectors (select and style a part of an element)</li>
+        <li>Attribute selectors (select elements based on an attribute or attribute value)</li>
+      </ul>
+      <p>This page will explain the most basic CSS selectors.</p>
+      <div class="css-element-selector">
+        <h3>The CSS element Selector</h3>
+        <p>The element selector selects HTML elements based on the element name.</p>
+        <div class="example">
+          <h4>Example</h4>
+          <p>Here, all elements on the page will be center-aligned, with a red text color:</p>
+          <pre>
+      <code>
+p {
+text-align: center;
+color: red;
+}
+      </code>
+      </pre>
+        </div>
+      </div>
+      <div class="css-id-selector">
+        <h3>The CSS id Selector</h3>
+        <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
+        <p>The id of an element is unique within a page, so the id selector is used to select one unique element!</p>
+        <p>To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
+        <div class="example">
+          <h4>Example</h4>
+          <p>The CSS rule below will be applied to the HTML element with id="para1":</p>
+          <pre>
+        <code>
+#para1 {
+text-align: center;
+color: red;
+}
+        </code>
+        </pre>
+        </div>
+      </div>
+      <div class="css-class-selector">
+        <h3>The CSS class Selector</h3>
+        <p>The class selector selects HTML elements with a specific class attribute.</p>
+        <p>To select elements with a specific class, write a period (.) character, followed by the class name.</p>
+        <div class="example">
+          <h4>Example</h4>
+          <p>In this example all HTML elements with class="center" will be red and center-aligned:</p>
+          <pre>
+        <code>
+.center {
+text-align: center;
+color: red;
+}
+        </code>
+        </pre>
+        </div>
+      </div>
+      <div class="css-universal-selector">
+        <h3>The CSS Universal Selector</h3>
+        <p>The universal selector (*) selects all HTML elements on the page.</p>
+        <div class="example">
+          <h4>Example</h4>
+          <p>The CSS rule below will affect every HTML element on the page:</p>
+          <pre>
+        <code>
+* {
+text-align: center;
+color: blue;
+}
+        </code>
+        </pre>
+        </div>
+      </div>
+      <div class="css-grouping-selector">
+        <h3>The CSS Grouping Selector</h3>
+        <p>The grouping selector selects all the HTML elements with the same style definitions.</p>
+        <p>Look at the following CSS code (the h1, h2, and p elements have the same style definitions):</p>
+        <div class="example">
+          <pre>
+        <code>
+h1 {
+text-align: center;
+color: red;
+}
+
+h2 {
+text-align: center;
+color: red;
+}
+
+p {
+text-align: center;
+color: red;
+}
+        </code>
+        </pre>
+        </div>
+        <p>It will be better to group the selectors, to minimize the code. To group selectors, separate each selector
+          with a comma.</p>
+        <div class="example">
+          <h4>Example</h4>
+          <p>In this example we have grouped the selectors from the code above:</p>
+          <pre>
+          <code>
+h1, h2, p {
+text-align: center;
+color: red;
+}
+          </code>
+          </pre>
+        </div>
+      </div>
+    </section>
+    <section class="main-section" id="How_To_Add_CSS">
+      <header>
+        <h2>How To Add CSS</h2>
+      </header>
+      <p>When a browser reads a style sheet, it will format the HTML document according to the information in the style
+        sheet.</p>
+      <p>Three Ways to Insert CSS:</p>
+      <ul>
+        <li>External CSS</li>
+        <li>Internal CSS</li>
+        <li>Inline CSS</li>
+      </ul>
+      <h3>External CSS</h3>
+      <p>With an external style sheet, you can change the look of an entire website by changing just one file!</p>
+      <p>Each HTML page must include a reference to the external style sheet file inside the &lt;link&gt; element,
+        inside the head section.</p>
+      <div class="example">
+        <h4>Example</h4>
+        <p>External styles are defined within the &lt;link&gt; element, inside the &lt;head&gt; section of an HTML page:
+        </p>
+        <pre>
+      <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;link rel="stylesheet" href="mystyle.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+<br>
+&lt;h1>This is a heading&lt;/h1&gt;
+&lt;p>This is a paragraph.&lt;/p&gt;
+<br>
+&lt;/body&gt;
+&lt;/html&gt;
+      </code>
+      </pre>
+      </div>
+      <h3>Internal CSS</h3>
+      <p>An internal style sheet may be used if one single HTML page has a unique style.</p>
+      <p>The internal style is defined inside the &lt;style&gt; element, inside the head section.</p>
+      <div class="example">
+        <h4>Example</h4>
+        <p>Internal styles are defined within the &lt;style&gt; element, inside the &lt;head&gt; section of an HTML
+          page:</p>
+        <pre>
+      <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+background-color: linen;
+}
+<br>
+h1 {
+color: maroon;
+margin-left: 40px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+<br>
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+<br>
+&lt;/body&gt;
+&lt;/html&gt;
+      </code>
+      </pre>
+      </div>
+      <h3>Inline CSS</h3>
+      <p>An inline style may be used to apply a unique style for a single element.</p>
+      <p>To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS
+        property.</p>
+      <div class="example">
+        <h4>Example</h4>
+        <p>Inline styles are defined within the "style" attribute of the relevant element:</p>
+        <pre>
+      <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+<br>
+&lt;h1 style="color:blue;text-align:center;"&gt;This is a heading&lt;/h1&gt;
+&lt;p style="color:red;"&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+      </code>
+      </pre>
+      </div>
+    </section>
+    <section class="main-section" id="CSS_Box_Model">
+      <header>
+        <h2>CSS Box Model</h2>
+      </header>
+      <h3>The CSS Box Model</h3>
+      <p>All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design
+        and layout.</p>
+      <p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders,
+        padding, and the actual content. The image below illustrates the box model:</p>
+      <img src="./images/w3-boxdim.png" alt="Box Model explanation">
+      <ul>
+        <li><strong>Content</strong> - The content of the box, where text and images appear</li>
+        <li><strong>Padding</strong> - Clears an area around the content. The padding is transparent</li>
+        <li><strong>Border</strong> - A border that goes around the padding and content</li>
+        <li><strong>Margin</strong> - Clears an area outside the border. The margin is transparent</li>
+      </ul>
+      <p>The box model allows us to add a border around elements, and to define space between elements.</p>
+      <div class="example">
+        <h4>Example</h4>
+        <p>Demonstration of the box model:</p>
+        <pre>
+      <code>
+div {
+width: 300px;
+border: 15px solid green;
+padding: 50px;
+margin: 20px;
+}
+      </code>
+      </pre>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
